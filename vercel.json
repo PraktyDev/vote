@@ -7,12 +7,6 @@
             "dest": "/vote.js"
         }
     ],
-    "builds": [
-        { 
-            "src": "/vote.js",
-            "use": "@vercel/node"
-        }
-    ],
     "functions": {
         "vote.js": {
           "memory": 1024,
