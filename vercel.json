@@ -1,18 +1,20 @@
 {
-    "version": 2,
-    "name": "vote machine",
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/api/vote.js"
+  "version": 2,
+  "name": "vote-machine",
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/vote.js" }
+  ],
+  "builds": [
+    {
+      "src": "/api/vote.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "node_modules/agentql/dist/core/js-snippets/**/*.js"
+        ]
       }
-    ],
-    "builds": [
-      { 
-          "src": "/api/vote.js",
-          "use": "@vercel/node"
-      }
-    ]
-  }
-  
+    }
+  ]
+}
+
   
