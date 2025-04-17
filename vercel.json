@@ -1,17 +1,18 @@
-{ 
+{
     "version": 2,
     "name": "vote machine",
     "routes": [
-        { 
-            "src": "/(.*)",
-            "dest": "/vote.js"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "/api/vote.js"
+      }
     ],
     "functions": {
-        "vote.js": {
-          "memory": 1024,
-          "maxDuration": 10
-        }
+      "api/vote.js": {
+        "memory": 1024,
+        "maxDuration": 10
+      }
     }
-}
+  }
+  
   
