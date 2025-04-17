@@ -1,0 +1,19 @@
+{
+  "name": "agentql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node vote.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "agentql": "^1.9.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}

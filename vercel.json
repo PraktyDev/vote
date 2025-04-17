@@ -1,0 +1,16 @@
+{ 
+    "version": 2,
+    "name": "vote machine",
+    "routes": [
+        { 
+            "src": "/(.*)",
+            "dest": "/vote.js"
+        }
+    ],
+    "builds": [
+        { 
+            "src": "/vote.js",
+            "use": "@vercel/node"
+        }
+    ] 
+}
