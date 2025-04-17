@@ -5,7 +5,7 @@
   "main": "vote.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api/vote.js"
+    "start": "nodemon api/vote.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "agentql": "^1.9.2",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "nodemon": "^3.1.9",
     "playwright-core": "^1.51.1"
   }
 }

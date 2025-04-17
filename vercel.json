@@ -7,12 +7,12 @@
         "dest": "/api/vote.js"
       }
     ],
-    "functions": {
-      "api/vote.js": {
-        "memory": 1024,
-        "maxDuration": 10
+    "builds": [
+      { 
+          "src": "/api/vote.js",
+          "use": "@vercel/node"
       }
-    }
+    ]
   }
   
   
