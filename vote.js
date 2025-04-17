@@ -18,7 +18,7 @@ const URL = "https://www.oyep.org/oyostateyouthsummit2025/vote/";
 
 app.get('/vote', async (req, res)=>{
   try {
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
       viewport: { width: 1280, height: 800 },
       ignoreHTTPSErrors: true
