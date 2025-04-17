@@ -1,8 +1,9 @@
-import { chromium } from "playwright";
+// import { chromium } from "playwright";
+import { chromium } from 'playwright-core';
+import Chromium from '@sparticuz/chromium';
 import { wrap, configure } from "agentql";
 import dotenv from "dotenv";
 import express from "express"
-
 
 
 dotenv.config()
@@ -18,7 +19,14 @@ const URL = "https://www.oyep.org/oyostateyouthsummit2025/vote/";
 
 app.get('/vote', async (req, res)=>{
   try {
-    const browser = await chromium.launch({ headless: true });
+    const isProduction = process.env.NODE_ENV === 'production';
+
+    const browser = await chromium.launch({
+      executablePath: isProduction ? await Chromium.executablePath() : undefined,
+      args: isProduction ? Chromium.args : [],
+      headless: true,
+    });
+
     const context = await browser.newContext({
       viewport: { width: 1280, height: 800 },
       ignoreHTTPSErrors: true
