@@ -13,6 +13,7 @@ const app = express()
 app.use(express.json())
 
 //i added a comment
+// comment 2
 
 configure({ apiKey: process.env.AGENTQL_API_KEY });
 
