@@ -1,5 +1,12 @@
+api
 node_modules
+.env
 
 lead.js
 
 scraper.js
+
+
+
+test.js
+vercel.json
